@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <style>
+        .one,.two {
+            list-style: none;
+            float: left;
+        }
+        .one li {
+            width: 50px;
+            height: 20px;
+        }
+        .two li {
+            width: 50px;
+            height: 20px;
+        }
+        .two li:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="one">
+        <li>按钮1</li>
+        <li>按钮2</li>
+        <li>按钮3</li>
+        <li>按钮4</li>
+    </ul>
+    <ul class="two">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        $('.one li').click(function(){
+            var i = $(this).index()
+            // 这里不能直接把i放children（）里面
+            $('.two').children().eq(i).show().siblings().hide()
+        })
+    </script>
+</body>
+</html>

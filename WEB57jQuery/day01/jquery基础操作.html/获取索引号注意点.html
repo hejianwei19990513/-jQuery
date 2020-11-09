@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <script>
+        $('li').click(function(){
+
+            // 依次点击六个小li：【注意】这里并【不是】依次显示0,1,2,3,4,5【而是】0,1,2,0,1,2。因为ul里面的li和ol里面的li不属于同一个父级，不是亲兄弟，这里获取索引号是其上一父级下的索引号，因为ol里面第一个li的索引号是0，所以获取的时候还是0
+            console.log($(this).index());
+        })
+    </script>
+</body>
+</html>

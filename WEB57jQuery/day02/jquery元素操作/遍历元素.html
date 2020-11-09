@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>小鞠女神呀1</div>
+    <div>小鞠女神呀2</div>
+    <div>小鞠女神呀3</div>
+    <script>
+        // 遍历jquery对象元素
+        var arr = ["red","pink","blue"]
+        $("div").each(function(i,domEle){
+
+            // domEle是dom对象，这里要转化成jquery对象
+            $(domEle).css("color",arr[i])
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        // DOM对象
+        div.style.display = 'none'
+
+        // 【注意】，两个对象各自使用各自的属性和方法，不能混合比如不能：
+        $('div').style.display = 'none'//这是错的
+        div.hide();//这也是错的
+
+        // jquery对象
+        $('div').hide();
+    </script>
+</body>
+</html>

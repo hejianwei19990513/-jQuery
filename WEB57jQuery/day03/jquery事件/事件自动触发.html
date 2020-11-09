@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        $("div").on("click",function(){
+            alert("1")
+        })
+        // 第一种自动触发事件
+        // $("div").click()
+        // 第二种
+        // $("div").trigger("click")
+        // 第三种【不会触发元素的默认行为】比如表单点击事件会有光标闪烁，这里就不会有
+        $("div").triggerHandler("click")
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>小鞠女神</div>
+    <div>小鞠女神</div>
+    <div>小鞠女神</div>
+    <div>小鞠女神</div>
+    <script>
+        // 这里不用for循环就能给每一个div背景颜色变粉色
+        $("div").css("background","pink")
+
+
+        
+        // 下面的为封装的函数
+        var obj = {
+            length:2,
+            "0":document.querySelectorAll('div')[0],
+            "1":document.querySelectorAll('div')[1],
+            css:function(cssStyle,value){
+                for(var i = 0 ; i < this.length ; i++) {
+                    obj[i].style[cssStyle] = value
+                }
+                return this
+            }
+        }
+        obj.css("background","red")
+    </script>
+</body>
+</html>

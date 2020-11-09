@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+    </ul>
+    <ol>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+    </ol>
+    <script>
+        // 第一个
+        $('ul li:first').css('color','red')
+
+        // 最后一个
+        $('ul li:last').css('color','pink')
+
+        // 索引号第几个
+        $('ul li:eq(2)').css('color','green')
+
+        // 【索引号】奇数个
+        $('ol li:odd').css('color','pink')
+
+        // 【索引号】偶数个
+        $('ol li:even').css('color','red')
+    </script>
+</body>
+</html>

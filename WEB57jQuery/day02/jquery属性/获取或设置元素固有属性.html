@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <a href="javascript:;" index="1"></a>
+    <div></div>
+    <script>
+        // 获取固有属性值 
+        console.log($("a").prop("href"));
+        // 设置固有属性值
+        $("a").prop("title","小鞠女神1号");
+        console.log($("a").prop("title"));
+
+        // 设置自定义属性值
+        $("a").attr("title","小鞠女神2号");
+        // 获取自定义属性（也能获取固有属性，但获取固有属性不用这个）
+        console.log($("a").attr("title"));
+
+        // 数据缓存data(),不在dom树里面显示，
+        $("div").data("uname","小鞠呀")
+        console.log($("div").data("uname"));
+    </script>
+</body>
+</html>

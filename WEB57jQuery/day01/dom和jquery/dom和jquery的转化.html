@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>121</div>
+    <script>
+        var div1 = document.querySelector('div')//dom对象
+        var div2 = $('div')//jquery对象，但是也是个伪数组
+        
+        // jquery对象转化成dom
+        div2[0] ==div1
+        div2.get(0) == div1
+        div2.get(0).style.display = 'none'
+
+        // dom转化为jquery
+        $(div1).hide();
+    </script>
+</body>
+</html>

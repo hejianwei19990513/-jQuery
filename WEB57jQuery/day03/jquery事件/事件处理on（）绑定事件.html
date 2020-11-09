@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+        <li>小鞠女神</li>
+    </ul>
+    <script>
+        // 事件处理
+        $("div").on({
+            mouseenter:function() {
+                $(this).css("backgroundColor","red")
+            },
+            click:function(){
+                $(this).css("backgroundColor","blue")
+            }
+        })
+
+        // on可以实现事件委托
+        //click是绑定在ul上的，但是触发对象是ul里面的li
+        $("ul").on("click","li",function(){
+            //这里this指的是li，就是触发对象
+            $(this).css("backgroundColor","red")
+
+            // 这里是ul变色
+            $("ul").css("backgroundColor","pink")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button>动起来</button>
+    <div></div>
+    <script>
+        $('button').click(function(){
+            // 并不是能变化所有的属性，比如颜色就不能，一般只能变化【含有数值】的属性
+            $('div').animate({
+                top:500,
+                left:500,
+                opacity:0.5,
+            },1000)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <span>小鞠女神</span>
+    </div>
+    <input type="text" value="请输入内容">
+    <script>
+        // 获取div的内容（html识别标签）
+        console.log($("div").text());
+        // 设置div的内容
+        $("div").text("小鞠是我女神")
+
+        // 获取表单的内容
+        console.log($("input").val());
+        // 修改表单的内容
+        $("input").val("小鞠女神")
+    </script>
+</body>
+</html>

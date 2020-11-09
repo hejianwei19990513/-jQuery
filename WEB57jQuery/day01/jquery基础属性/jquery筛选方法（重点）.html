@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="yeye">
+        <ul class="father">
+            <li></li>
+            <li class="two"></li>
+            <li id="one"></li>
+        </ul>
+    </div>
+    <script>
+        var two = $('.two')
+        // 1找父亲
+        console.log(two.parent());//输出为ul
+
+        // 2找爷爷
+        console.log(two.parents('.yeye'));//输出为div.yeye
+
+        // 3找子一代
+        console.log($('.yeye').children());//输出为ul.father
+
+        // 4.找后代
+        console.log($('.yeye').find('.two'));//输出为li.two
+
+        // 5.找兄弟
+        console.log(two.siblings('#one'));//输出为li#one
+        
+    </script>
+</body>
+</html>
